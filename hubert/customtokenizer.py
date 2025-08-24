@@ -6,6 +6,7 @@ License: MIT
 
 import json
 import os.path
+import platform
 from zipfile import ZipFile
 
 import numpy
@@ -116,7 +117,13 @@ class CustomTokenizer(nn.Module):
             model = CustomTokenizer()
         else:
             model = CustomTokenizer(data_from_model.hidden_size, data_from_model.input_size, data_from_model.output_size, data_from_model.version)
-        model.load_state_dict(torch.load(path))
+            
+        is_apple_silicon = platform.platform().lower().find('macos') > -1 and platform.processor() == 'arm'
+        if is_apple_silicon:
+            model.load_state_dict(torch.load(path, map_location=map_location))
+        else:
+            model.load_state_dict(torch.load(path))
+
         if map_location:
             model = model.to(map_location)
         return model
