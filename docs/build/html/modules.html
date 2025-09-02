@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>bark &#8212; Bark 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="bark">
+<h1>bark<a class="headerlink" href="#bark" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bark.html">bark package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bark.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bark.html#module-bark.api">bark.api module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.api.generate_audio"><code class="docutils literal notranslate"><span class="pre">generate_audio()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.api.save_as_prompt"><code class="docutils literal notranslate"><span class="pre">save_as_prompt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.api.semantic_to_waveform"><code class="docutils literal notranslate"><span class="pre">semantic_to_waveform()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.api.text_to_semantic"><code class="docutils literal notranslate"><span class="pre">text_to_semantic()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bark.html#module-bark.generation">bark.generation module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.generation.InferenceContext"><code class="docutils literal notranslate"><span class="pre">InferenceContext</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.generation.autocast"><code class="docutils literal notranslate"><span class="pre">autocast()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.generation.clean_models"><code class="docutils literal notranslate"><span class="pre">clean_models()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.generation.codec_decode"><code class="docutils literal notranslate"><span class="pre">codec_decode()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.generation.generate_coarse"><code class="docutils literal notranslate"><span class="pre">generate_coarse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.generation.generate_fine"><code class="docutils literal notranslate"><span class="pre">generate_fine()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.generation.generate_text_semantic"><code class="docutils literal notranslate"><span class="pre">generate_text_semantic()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.generation.load_codec_model"><code class="docutils literal notranslate"><span class="pre">load_codec_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.generation.load_model"><code class="docutils literal notranslate"><span class="pre">load_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.generation.preload_models"><code class="docutils literal notranslate"><span class="pre">preload_models()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bark.html#module-bark.model">bark.model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.model.Block"><code class="docutils literal notranslate"><span class="pre">Block</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.Block.forward"><code class="docutils literal notranslate"><span class="pre">Block.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.model.CausalSelfAttention"><code class="docutils literal notranslate"><span class="pre">CausalSelfAttention</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.CausalSelfAttention.forward"><code class="docutils literal notranslate"><span class="pre">CausalSelfAttention.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.model.GPT"><code class="docutils literal notranslate"><span class="pre">GPT</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.GPT.forward"><code class="docutils literal notranslate"><span class="pre">GPT.forward()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.GPT.get_num_params"><code class="docutils literal notranslate"><span class="pre">GPT.get_num_params()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.model.GPTConfig"><code class="docutils literal notranslate"><span class="pre">GPTConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.GPTConfig.bias"><code class="docutils literal notranslate"><span class="pre">GPTConfig.bias</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.GPTConfig.block_size"><code class="docutils literal notranslate"><span class="pre">GPTConfig.block_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.GPTConfig.dropout"><code class="docutils literal notranslate"><span class="pre">GPTConfig.dropout</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.GPTConfig.input_vocab_size"><code class="docutils literal notranslate"><span class="pre">GPTConfig.input_vocab_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.GPTConfig.n_embd"><code class="docutils literal notranslate"><span class="pre">GPTConfig.n_embd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.GPTConfig.n_head"><code class="docutils literal notranslate"><span class="pre">GPTConfig.n_head</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.GPTConfig.n_layer"><code class="docutils literal notranslate"><span class="pre">GPTConfig.n_layer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.GPTConfig.output_vocab_size"><code class="docutils literal notranslate"><span class="pre">GPTConfig.output_vocab_size</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.model.LayerNorm"><code class="docutils literal notranslate"><span class="pre">LayerNorm</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.LayerNorm.forward"><code class="docutils literal notranslate"><span class="pre">LayerNorm.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.model.MLP"><code class="docutils literal notranslate"><span class="pre">MLP</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model.MLP.forward"><code class="docutils literal notranslate"><span class="pre">MLP.forward()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bark.html#module-bark.model_fine">bark.model_fine module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.model_fine.FineBlock"><code class="docutils literal notranslate"><span class="pre">FineBlock</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model_fine.FineBlock.forward"><code class="docutils literal notranslate"><span class="pre">FineBlock.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.model_fine.FineGPT"><code class="docutils literal notranslate"><span class="pre">FineGPT</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model_fine.FineGPT.forward"><code class="docutils literal notranslate"><span class="pre">FineGPT.forward()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model_fine.FineGPT.get_num_params"><code class="docutils literal notranslate"><span class="pre">FineGPT.get_num_params()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.model_fine.FineGPTConfig"><code class="docutils literal notranslate"><span class="pre">FineGPTConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model_fine.FineGPTConfig.n_codes_given"><code class="docutils literal notranslate"><span class="pre">FineGPTConfig.n_codes_given</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model_fine.FineGPTConfig.n_codes_total"><code class="docutils literal notranslate"><span class="pre">FineGPTConfig.n_codes_total</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bark.html#bark.model_fine.NonCausalSelfAttention"><code class="docutils literal notranslate"><span class="pre">NonCausalSelfAttention</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bark.html#bark.model_fine.NonCausalSelfAttention.forward"><code class="docutils literal notranslate"><span class="pre">NonCausalSelfAttention.forward()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bark.html#module-bark">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Bark</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Luis.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

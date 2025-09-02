@@ -1,0 +1,18 @@
+name: Python Linter
+on: 
+  push:
+    branches:
+      - '*'
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2  
+      - name: Python Linter
+        uses: sunnysid3up/python-linter@master
+        with:
+          source: "bark"
+          mypy-options: "--ignore-missing-imports --show-error-codes"
+          pylint-options: "--rcfile=setup.cfg"
+          isort-options: "-w 100"
